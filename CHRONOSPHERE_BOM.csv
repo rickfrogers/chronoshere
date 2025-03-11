@@ -1,0 +1,31 @@
+Category,Component,Value/Model,Quantity,Notes
+Digital Core,Teensy 4.0/3.2,PJRC Teensy,1,Main microcontroller
+Digital Core,Audio Adapter Board,PJRC Audio Shield,1,Required for audio processing
+Control Interface,Potentiometer,100kΩ Linear (Alpha),4,Speed/Depth/Tone/Mix controls
+Control Interface,Rotary Encoder,PEC11R-4220F-S0024,1,With push button
+Control Interface,Footswitch,SPDT Momentary,1,True bypass switching
+Control Interface,LED,5mm Blue,4,Mode indicators
+Control Interface,LED Resistor,1kΩ 1/4W,4,Current limiting
+Control Interface,Pull-up Resistor,10kΩ 1/4W,1,Bypass switch
+Analog Section,Op-amp,TL072,2,Input/Output buffers
+Analog Section,Input Resistor,1MΩ 1/4W,2,Input impedance
+Analog Section,Gain Resistor,100kΩ 1/4W,2,Gain stage
+Analog Section,Mixing Resistor,10kΩ 1/4W,2,Output mixing
+Analog Section,DC Blocking Cap,100nF Film,4,Signal coupling
+Analog Section,Power Cap,10µF Electrolytic,2,Power supply decoupling
+Power Supply,DC Jack,2.1mm Center Negative,1,Power input
+Power Supply,Voltage Regulator,7805,1,5V regulation
+Power Supply,Voltage Regulator,L78L33,1,3.3V regulation
+Power Supply,Filter Cap,100µF Electrolytic,2,Power filtering
+Power Supply,Bypass Cap,100nF Ceramic,2,High-frequency filtering
+Power Supply,Protection Diode,1N4001,1,Reverse polarity protection
+Enclosure,Case,125B Aluminum,1,Hammond or similar
+Enclosure,Knob,Davies 1510,4,For potentiometers
+Enclosure,Encoder Knob,Davies 1900,1,For mode selection
+Enclosure,Jack Socket,1/4" Mono,2,Neutrik or Switchcraft
+Enclosure,Mounting Hardware,M3 x 6mm,8,Case screws
+Enclosure,PCB Standoff,M3 x 10mm,4,Board mounting
+Enclosure,Rubber Feet,Self-adhesive,4,Case stability
+Misc,Hookup Wire,22AWG,1,Various colors
+Misc,Shielded Cable,22AWG,2,Audio connections
+Misc,Heat Shrink,Various sizes,1,Wire insulation

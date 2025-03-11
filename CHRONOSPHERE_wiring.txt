@@ -1,0 +1,101 @@
+CHRONOSPHERE Effects Pedal - Detailed Wiring Diagram
+=================================================
+
+1. POWER SUPPLY SECTION
+----------------------
+9V DC Input Jack
+└── (+) → 1N4001 diode → 7805 IN
+    └── 7805 OUT → 100µF cap → GND
+    └── 7805 OUT → 100nF cap → GND
+    └── 7805 OUT → L78L33 IN
+        └── L78L33 OUT → 100µF cap → GND
+        └── L78L33 OUT → 100nF cap → GND
+        └── L78L33 OUT → Teensy VIN
+
+2. AUDIO INPUT SECTION
+---------------------
+Input Jack (Tip)
+└── 1MΩ resistor → GND
+└── 100nF cap → TL072#1 Pin 3
+    └── TL072#1 Pin 2 → 100kΩ resistor → TL072#1 Pin 1
+    └── TL072#1 Pin 1 → 100nF cap → Audio Shield IN_L
+
+3. AUDIO OUTPUT SECTION
+----------------------
+Audio Shield OUT_L
+└── 100nF cap → TL072#2 Pin 5
+    └── TL072#2 Pin 6 → 10kΩ resistor → TL072#2 Pin 7
+    └── TL072#2 Pin 7 → 100nF cap → Output Jack (Tip)
+
+4. CONTROL INTERFACE
+-------------------
+Potentiometers:
+SPEED_POT (A1):
+└── Pin 1 → GND
+└── Pin 2 → Teensy A1
+└── Pin 3 → 3.3V
+
+DEPTH_POT (A2):
+└── Pin 1 → GND
+└── Pin 2 → Teensy A2
+└── Pin 3 → 3.3V
+
+TONE_POT (A3):
+└── Pin 1 → GND
+└── Pin 2 → Teensy A3
+└── Pin 3 → 3.3V
+
+MIX_POT (A4):
+└── Pin 1 → GND
+└── Pin 2 → Teensy A4
+└── Pin 3 → 3.3V
+
+Rotary Encoder:
+└── CLK → Teensy Pin 4 (+ 10kΩ pullup → 3.3V)
+└── DT → Teensy Pin 5 (+ 10kΩ pullup → 3.3V)
+└── GND → GND
+
+5. LED INDICATORS
+----------------
+MODE_LED 1:
+└── Anode → 1kΩ resistor → Teensy Pin 11
+└── Cathode → GND
+
+MODE_LED 2:
+└── Anode → 1kΩ resistor → Teensy Pin 12
+└── Cathode → GND
+
+MODE_LED 3:
+└── Anode → 1kΩ resistor → Teensy Pin 13
+└── Cathode → GND
+
+MODE_LED 4:
+└── Anode → 1kΩ resistor → Teensy Pin 14
+└── Cathode → GND
+
+6. BYPASS SWITCH
+---------------
+SPDT Footswitch:
+└── Common → GND
+└── NO → Teensy Pin 2 (+ 10kΩ pullup → 3.3V)
+
+7. GROUND CONNECTIONS
+--------------------
+- Star ground configuration
+- Single ground point for analog section
+- Separate digital ground star point
+- Connect analog and digital grounds at power entry
+
+8. SHIELDING
+------------
+- Use shielded cable for audio input/output
+- Ground shield at input end only
+- Keep digital signals away from analog audio paths
+
+Notes:
+- All resistor values in ohms (Ω)
+- All capacitor values in farads (F)
+- Use stranded wire for connections to moving parts
+- Heat shrink all solder joints
+- Double-check all polarized component orientations
+- Test voltages before connecting Teensy
